@@ -7,10 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1LHnUqlgs7KBuO83nj85tCdRdeHaJkXUd
 """
 
-# подключаемся к google диску
-from google.colab import drive
-drive.mount('/content/drive')
-
 # устанавливаем pymorphy3
 # !pip install pymorphy3 --q
 
@@ -25,7 +21,7 @@ nltk.download("punkt_tab") # Это дополнение к punkt, которо�
 morph = pymorphy3.MorphAnalyzer() # объект морфологического анализатора
 
 # читаем текст с гугл диска
-path = '/content/drive/MyDrive/TSU/SEMESTR_7/NLP/LW1/text.txt'
+path = 'text.txt'
 with open(path, "r", encoding="utf-8") as f:
     text = f.read()
 
