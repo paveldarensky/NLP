@@ -27,7 +27,7 @@ word2vec = gensim.models.KeyedVectors.load_word2vec_format("cbow.txt", binary=Fa
 pos = ["король_NOUN"]
 neg = ["корона_NOUN"]
 
-dist = word2vec.most_similar(positive=pos, negative=neg, topn=10)
+dist = word2vec.most_similar(positive=pos, negative=neg, topn=20) # topn=20, чтобы в топ10 было больше существительных
 
 print("Результаты:")
 for w, score in dist:
