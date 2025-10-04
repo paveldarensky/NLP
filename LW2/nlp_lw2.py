@@ -15,8 +15,17 @@ import re
 # Загружаем модель
 word2vec = gensim.models.KeyedVectors.load_word2vec_format("cbow.txt", binary=False)
 
-pos = ["король_NOUN", "посланник_NOUN"]
-neg = ["титул_NOUN"]
+# pos = ["король_NOUN", "посланник_NOUN"]
+# neg = ["титул_NOUN"]
+
+# pos = ["король_NOUN", "дипломат_NOUN"]
+# neg = ["титул_NOUN"]
+
+# pos = ["король_NOUN", "чиновник_NOUN"]
+# neg = ["титул_NOUN"]
+
+pos = ["король_NOUN"]
+neg = ["корона_NOUN"]
 
 dist = word2vec.most_similar(positive=pos, negative=neg, topn=10)
 
